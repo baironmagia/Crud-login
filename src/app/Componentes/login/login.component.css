@@ -1,0 +1,27 @@
+.body{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    background-color: rgb(66, 72, 86);
+}
+.login{
+    width: 100%;
+    max-width: 330px;
+    text-align: center;
+}
+.login img{
+    width: 50%;
+}
+h1{
+    color: white;
+}
+.ancho{
+    width: 80%;
+}
+.alto{
+    height: 50px;
+}
+.spinner{
+    margin: auto;
+}

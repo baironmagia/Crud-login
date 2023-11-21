@@ -1,0 +1,11 @@
+<p>
+  <mat-toolbar color="primary">
+    <span> App usuario </span>
+    <span class="example-spacer"></span>
+    <button mat-flat-button color="primary" *ngFor="let item of menu" [routerLink]="item.redirect">{{item.nombre}}</button>
+    <span class="example-spacer"></span>
+    <button routerLink="/login" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+      </button>
+  </mat-toolbar>
+</p>

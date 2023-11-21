@@ -1,0 +1,63 @@
+<div class="container">
+  <mat-toolbar>
+    <span>Crear usuario</span>
+  </mat-toolbar>
+  <mat-card style="margin-top: 20px">
+    <form [formGroup]="form" (ngSubmit)="agregarUsuario()">
+      <mat-grid-list cols="5" rowHeight="80px">
+        <mat-grid-tile [colspan]="2" [rowspan]="1">
+          <mat-form-field appearance="outline" style="padding-top: 20px" class="ancho"><mat-label>Nombre usaurio</mat-label>
+            <input matInput formControlName="userName"/>
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="2" [rowspan]="1">
+          <mat-form-field appearance="outline" style="padding-top: 20px" class="ancho"><mat-label>Contraseña</mat-label>
+            <input matInput formControlName="password"/>
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="3" [rowspan]="5">
+          <img src="/assets/img/profile.png" width="250px" />
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="2" [rowspan]="1">
+          <mat-form-field
+            appearance="outline"
+            style="padding-top: 20px"
+            class="ancho"
+          >
+            <mat-label>Nombres</mat-label>
+            <input matInput  formControlName="nombre"/>
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="2" [rowspan]="1">
+          <mat-form-field
+            appearance="outline"
+            style="padding-top: 20px"
+            class="ancho"
+          >
+            <mat-label>Apellidos</mat-label>
+            <input matInput formControlName="apellido" />
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="2" [rowspan]="1">
+          <mat-form-field
+            appearance="outline"
+            style="padding-top: 20px"
+            class="ancho"
+          >
+            <mat-label>Sexo</mat-label>
+            <mat-select formControlName="sexo">
+              <mat-option *ngFor="let item of sexos" [value]="item">{{item}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile
+          [colspan]="2"
+          [rowspan]="1">
+          <button mat-stroked-button style="margin-right: 5px;">Atras</button>
+          <button type="submit" [disabled]="form.invalid" mat-raised-button color="warn">Aceptar</button>
+          </mat-grid-tile
+        >
+      </mat-grid-list>
+    </form>
+  </mat-card>
+</div>
